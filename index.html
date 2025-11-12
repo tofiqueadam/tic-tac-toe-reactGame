@@ -1,3 +1,24 @@
+<!--
+  ============================================================================
+  STEP 1: index.html - The Starting Point
+  ============================================================================
+  
+  This is a regular HTML file - the entry point of our React app.
+  
+  KEY CONCEPTS:
+  - The <div id="root"></div> is an EMPTY container
+  - This is where React will "mount" (put) our entire app
+  - React doesn't replace the whole HTML page - it takes control of ONE element
+  - Think of #root as a parking spot where React will "park" our app
+  
+  HOW IT WORKS:
+  1. Browser loads this HTML file
+  2. Browser finds the empty <div id="root">
+  3. Browser loads the script from /src/main.jsx
+  4. main.jsx tells React to put the App component inside #root
+  5. React takes over and manages everything inside #root
+-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,8 +27,17 @@
     <title>Tic Tac Toe - Learn React</title>
   </head>
   <body>
+    <!-- 
+      This empty div is where React will render our entire app.
+      React will find this element and put all our components inside it.
+    -->
     <div id="root"></div>
+
+    <!-- 
+      This script tag loads our React code.
+      type="module" means we're using ES6 modules (import/export).
+      When the browser loads this, it will execute main.jsx
+    -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
-
